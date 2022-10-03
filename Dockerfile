@@ -8,9 +8,9 @@ WORKDIR /usr/src/app
 # ENV SECRET_NAME
 # ENV SECRET_VALUE
 
-COPY ./requirements.pip ./
-COPY ./run.py ./
+COPY ./requirements.pip ./requirements.pip
+COPY ./run.py ./run.py
 
 RUN pip install -r requirements.pip
 
-ENTRYPOINT ["python3", "run.py"]
+ENTRYPOINT ["/usr/local/bin/python", "/usr/src/app/run.py"]
