@@ -1,5 +1,5 @@
 name: update-githu-secret
-description: "This action provides creates a new github actions secret or updates an existing one."
+description: "This action creates a new github actions secret or updates an existing one."
 author: 'Charles Boadu Jr'
 runs:
   using: 'docker'
