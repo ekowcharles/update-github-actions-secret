@@ -4,3 +4,6 @@ author: 'Charles Boadu Jr'
 runs:
   using: 'docker'
   image: 'Dockerfile'
+branding:
+  icon: 'lock'  
+  color: 'purple'
