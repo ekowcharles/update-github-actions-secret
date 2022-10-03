@@ -6,10 +6,10 @@ This action create a new Github Action secret or updates an already existing one
 
 ```yaml
 - name: Create or update Github Actions secret
-  uses: ekowcharles/update-secret@v1
+  uses: ekowcharles/update-github-actions-secret@v1
   env:
-    OWNER: ekowcharles
-    REPOSITORY: update-secret
+    OWNER: somegithubhandle
+    REPOSITORY: somerepository
     ACCESS_TOKEN: et984tnGHtet829je
     SECRET_NAME: SOME_SECRET
     SECRET_VALUE: tcps3cr3t
