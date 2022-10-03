@@ -1,4 +1,4 @@
-# update-secret
+# update-github-actions-secret
 
 This action create a new Github Action secret or updates an already existing one.
 

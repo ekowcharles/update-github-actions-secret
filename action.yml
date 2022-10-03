@@ -1,4 +1,4 @@
-name: update-github-secret
+name: update-github-actions-secret
 description: "This action creates a new github actions secret or updates an existing one."
 author: 'Charles Boadu Jr'
 runs:
