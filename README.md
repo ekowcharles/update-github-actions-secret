@@ -21,14 +21,16 @@ This action create a new Github Action secret or updates an already existing one
 
 `REPOSITORY` is the name of the respository where the secret is to be created or updated. <b>Required</b>.
 
-`ACCESS_TOKEN` is the [access token](https://docs.github.com/en/rest/quickstart) to use for authentication against the repository where the secret is stored. <b>Required</b>.
+`ACCESS_TOKEN` is the personal access token to use for authentication against the repository where the secret is stored. Using `secrets.GIHUB_TOKEN` will not work. Follo steps [here](https://docs.github.com/en/enterprise-server@3.4/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) to create one if you dont already have one. Besure to allow the token to be used to read user public keys<b>Required</b>.
+![permission](permission.png)
+
 
 `SECRET_NAME` is the name of the secret to be created or updated. <b>Required</b>.
 
 `SECRET_VALUE` is value the secret should be set to. <b>Optional</b>. This could be an [output from a previous step or job](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idoutputs).
 
 
-To view the newly created secret, navidate to settings >> secrets >> actions in the Github repository portal.
+To view the newly created secret, navigate to settings >> secrets >> actions in the Github repository portal.
 ## Motivation
 
 I wanted to use the [kubectl-aws-eks](https://github.com/kodermax/kubectl-aws-eks) github action to manage my AWS EKS cluster and it required that I pass the kubenetes configuration to the `KUBE_CONFIG_DATA` variable. This configuration happened to be an ouput of a terraform routine I use to set up the EKS cluster so I wanted a way to persist the kubenetes configuration and access it later when I needed to maintain the cluster.
@@ -37,6 +39,7 @@ The solution to that challenge is what I have shared in this github action.
 
 ## References
 
+1. [Create personal access token](https://docs.github.com/en/enterprise-server@3.4/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
 1. [Get repository public key](https://docs.github.com/en/rest/actions/secrets#get-a-repository-public-key)
 1. [Create or update a repository secret
 ](https://docs.github.com/en/rest/actions/secrets#create-or-update-a-repository-secret)
