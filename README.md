@@ -27,6 +27,8 @@ This action create a new Github Action secret or updates an already existing one
 
 `SECRET_VALUE` is value the secret should be set to. <b>Optional</b>. This could be an [output from a previous step or job](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idoutputs).
 
+
+To view the newly created secret, navidate to settings >> secrets >> actions in the Github repository portal.
 ## Motivation
 
 I wanted to use the [kubectl-aws-eks](https://github.com/kodermax/kubectl-aws-eks) github action to manage my AWS EKS cluster and it required that I pass the kubenetes configuration to the `KUBE_CONFIG_DATA` variable. This configuration happened to be an ouput of a terraform routine I use to set up the EKS cluster so I wanted a way to persist the kubenetes configuration and access it later when I needed to maintain the cluster.
