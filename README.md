@@ -21,7 +21,7 @@ This action create a new Github Action secret or updates an already existing one
 
 `REPOSITORY` is the name of the respository where the secret is to be created or updated. <b>Required</b>.
 
-`ACCESS_TOKEN` is the personal access token to use for authentication against the repository where the secret is stored. Using `secrets.GIHUB_TOKEN` will not work. Follo steps [here](https://docs.github.com/en/enterprise-server@3.4/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) to create one if you dont already have one. Besure to allow the token to be used to read user public keys<b>Required</b>.
+`ACCESS_TOKEN` is the personal access token to use for authentication against the repository where the secret is stored. Using `secrets.GIHUB_TOKEN` will not work. Follo steps [here](https://docs.github.com/en/enterprise-server@3.4/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) to create one if you dont already have one. Besure to allow the token to be used to read user public keys. <b>Required</b>.
 ![permission](permission.png)
 
 
