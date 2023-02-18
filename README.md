@@ -12,7 +12,7 @@ This action create a new Github Action secret or updates an already existing one
     REPOSITORY: somerepository
     ACCESS_TOKEN: et984tnGHtet829je
     SECRET_NAME: SOME_SECRET
-    SECRET_VALUE: tcps3cr3t
+    SECRET_VALUE: <output-from-previous-step>
 ```
 
 <i>where</i>
@@ -27,7 +27,7 @@ This action create a new Github Action secret or updates an already existing one
 
 `SECRET_NAME` is the name of the secret to be created or updated. <b>Required</b>.
 
-`SECRET_VALUE` is value the secret should be set to. <b>Optional</b>. This could be an [output from a previous step or job](https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idoutputs).
+`SECRET_VALUE` is value the secret should be set to. <b>Optional</b>. This should be an output from a previous step or job(https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#jobsjob_idoutputs). !!! DO NOT HARDCODE THIS, NOT SECURE !!!
 
 
 To view the newly created secret, navigate to settings >> secrets >> actions in the Github repository portal.
